@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPredictive | Dashboard Agronómico Profesional</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #27ae60;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --border: #e1e8ed;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { margin: 0.5rem 0 0; color: #bdc3c7; font-size: 1.1rem; }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            padding: 1.2rem 1.5rem;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+        }
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background: #fff;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .card-body {
+            padding: 1.5rem;
+            background: #fafbfc;
+            border-top: 1px solid var(--border);
+        }
+        .card-body h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+            color: var(--accent);
+        }
+        .card-body ul {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
+        }
+        .card-body li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NutriPredictive Agrotech Suite</h1>
+        <p>Plataforma de Diagnóstico, Fertirriego y Balance Nutricional Avanzado</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Gráfico 1 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>1. Evolución Foliar vs. Banda Fenológica</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_1.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Monitoreo continuo de las concentraciones foliares frente a los rangos óptimos fenológicos de la temporada.</li>
+                    <li>Permite identificar de forma temprana desvíos nutricionales antes de que se manifiesten visualmente en el cultivo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 2 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>2. Sincronización Fenológica (Demanda vs. Fertirriego)</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_2.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Alineación directa entre la curva de absorción biológica del cultivo y la estrategia operativa de inyección.</li>
+                    <li>Optimización de recursos hídricos y nutricionales durante los estados críticos de alta demanda.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 3 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>3. Calibración del Modelo: Estimado vs. Medido Real</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_3.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Mide el porcentaje de desviación entre el algoritmo predictivo inicial y los datos reales de laboratorio y campo.</li>
+                    <li>Identifica superávits naturales (ej. agua rica en potasio) y déficits críticos que requieren corrección inmediata.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 4 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>4. Balance Nutricional: Cobertura de Requerimientos (kg/ha)</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_4.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Descuenta de forma inteligente los aportes gratuitos del suelo y agua de riego sobre la meta total de la planta.</li>
+                    <li>Calcula con precisión milimétrica el volumen comercial exacto de fertilizantes que se debe adquirir e inyectar.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 5 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>5. Parcialización Mensual Fenológica (%)</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_5.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Distribuye porcentualmente el consumo anual de macronutrientes principales según la demanda de la especie.</li>
+                    <li>Guía operativa directa para la programación semanal y mensual del fertirriego en la caseta de válvulas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 6 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>6. Análisis de Densidad y Dispersión Foliar por Cuarteles</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_6.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Combina estadística descriptiva y densidad de probabilidad para evaluar la variabilidad espacial en el predio.</li>
+                    <li>Detecta rápidamente cuarteles atípicos o fuera de la banda de suficiencia óptima (90% - 110%).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gráfico 7 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>7. Matriz de Correlación Multivariable (Diagnóstico de Interacciones)</h2>
+            </div>
+            <div class="iframe-container">
+                <iframe src="grafico_7.html"></iframe>
+            </div>
+            <div class="card-body">
+                <h3>Descripción Técnica</h3>
+                <ul>
+                    <li>Muestra intercorrelaciones estadísticas entre rendimiento, niveles foliares y humedad del suelo.</li>
+                    <li>Identifica antagonismos críticos (bloqueos iónicos entre K, Ca y Mg) y sinergias productivas de alto impacto.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>NutriPredictive Agrotech Suite &copy; 2026 — Desarrollado para Asesoría Agronómica Profesional</p>
+    </footer>
+
+</body>
+</html>
